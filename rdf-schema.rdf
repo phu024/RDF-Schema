@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/20/22-rdf-systax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdfs:Class rdf:ID="Vehicle" />
+
+    <rdfs:Class rdf:ID="carParts" />
+
+    <rdfs:Class rdf:ID="Automobile">
+        <rdfs:subClassOf rdf:resource="#Vehicle;" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:ID="Ening">
+        <rdfs:subClassOf rdf:resource="##carParts;" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:ID="Truck">
+        <rdfs:subClassOf rdf:resource="#Automobile;" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:ID="Van">
+        <rdfs:subClassOf rdf:resource="#Automobile;" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:ID="passengerVehicle">
+        <rdfs:subClassOf rdf:resource="#Automobile;" />
+    </rdfs:Class>
+
+    <rdfs:Class rdf:ID="miniVan">
+        <rdfs:subClassOf rdf:resource="#Van;" />
+        <rdfs:subClassOf rdf:resource="#passengerVehicle"/>
+    </rdfs:Class>
+
+    <rdf:Property rdf:ID="hasEnging">
+        <rdfs:domain rdf:resource="#Automobile;" />
+        <rdfs:range rdf:resource="#Ening;" />
+    </rdf:Property>
+    
+</rdf:RDF>
